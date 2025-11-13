@@ -27,7 +27,7 @@ function kirimPesanan() {
   const admin = "6287770846442";
 
   // Format isi pesan
-  let teks = `📦 *PESANAN BARU KELOMPOK-1*\n\n👤 Nama: ${nama}\n📞 No HP: ${nohp}\n\n🍴 *Daftar Pesanan:*\n`;
+  let teks = `📦 *PESANAN BARU KELOMPOK-1*\n\n👤 Nama: ${nama}\n📞 kelas: ${nohp}\n\n🍴 *Daftar Pesanan:*\n`;
   pesanan.forEach((item, i) => {
     teks += `${i + 1}. ${item.nama} - Rp${item.harga.toLocaleString()}\n`;
   });
@@ -37,4 +37,5 @@ function kirimPesanan() {
   const url = `https://wa.me/${admin}?text=${encodeURIComponent(teks)}`;
   window.open(url, "_blank");
 }
+
 
