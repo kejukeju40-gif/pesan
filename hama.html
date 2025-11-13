@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RasaNusantara - Pemesanan Makanan Premium</title>
+  <link rel="stylesheet" href="style1.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">🍽️ RasaNusantara</div>
+    <nav>
+      <ul>
+        <li><a href="#">Beranda</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#">Tentang Kami</a></li>
+        <li><a href="#">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>XI-PPLG-1 <span>KELOMPOK-1</span></h1>
+      <p>Nikmati cita rasa khas Indonesia dengan kualitas premium dan pelayanan terbaik.</p>
+      <a href="#menu" class="btn-primary">Pesan Sekarang</a>
+    </div>
+  </section>
+
+  <section id="menu" class="menu-section">
+    <h2>Varian Lumpia Kami</h2>
+    <p>1 paket isi 3</p>
+    <div class="menu-container">
+      <div class="menu-item">
+        <img src="IMG-20251113-WA0027.jpg" alt="Nasi Goreng" />
+        <h3>Varian Keju</h3>
+        <p>Komposisi:UBI, kulit lumpia,coklat,gula,garam.</p>
+        <span class="price">Rp5.000</span>
+        <button onclick="tambah('Varian Keju', 5000)">Pesan</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="IMG-20251113-WA0028.jpg" alt="Mie Ayam" />
+        <h3>varian coklat</h3>
+        <p>Komposisi: UBI, kulit lumpia,keju,gula,garam.</p>
+        <span class="price">Rp5.000</span>
+        <button onclick="tambah('varian coklat', 5000)">Pesan</button>
+      </div>
+
+    
+    <div id="total" class="total-box">Total Pesanan: Rp0</div>
+
+    <div class="order-form">
+      <h3>📝 Lengkapi Data Pemesan</h3>
+      <input type="text" id="nama" placeholder="Nama Anda" required />
+      <input type="tel" id="nohp" placeholder="Nomor HP / WhatsApp Anda" required />
+      <button id="kirimWA" class="btn-primary" onclick="kirimPesanan()">Kirim ke WhatsApp</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 SMKN 1 BULUKERTO. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

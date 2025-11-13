@@ -1,0 +1,219 @@
+/* ==== GLOBAL STYLE ==== */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #fafafa;
+  color: #333;
+}
+
+/* ==== NAVBAR ==== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1a1a1a;
+  color: white;
+  padding: 15px 60px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.logo {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.navbar a:hover {
+  color: #f39c12;
+}
+
+/* ==== HERO SECTION ==== */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url("IMG-20251113-WA0030.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Lapisan gelap semi-transparan agar teks tetap terbaca */
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 20px;
+  animation: fadeInUp 1.2s ease;
+}
+.hero-content h1 {
+  font-size: 3em;
+  margin-bottom: 15px;
+}
+.hero-content span {
+  color: #f39c12;
+}
+.hero-content p {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+}
+.btn-primary {
+  background: #f39c12;
+  padding: 12px 25px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+.btn-primary:hover {
+  background: #e67e22;
+}
+
+/* Animasi lembut saat muncul */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==== MENU SECTION ==== */
+.menu-section {
+  padding: 80px 60px;
+  background: white;
+  text-align: center;
+}
+.menu-section h2 {
+  font-size: 2.2em;
+  color: #333;
+  margin-bottom: 40px;
+}
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+.menu-item {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.menu-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.menu-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.menu-item h3 {
+  color: #f39c12;
+  margin: 15px 0 10px;
+}
+.menu-item p {
+  padding: 0 15px;
+  font-size: 0.95em;
+  color: #555;
+}
+.price {
+  display: block;
+  font-weight: bold;
+  color: #27ae60;
+  margin: 10px 0;
+}
+.menu-item button {
+  background: #27ae60;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: background 0.3s;
+}
+.menu-item button:hover {
+  background: #219150;
+}
+
+/* ==== TOTAL BOX ==== */
+.total-box {
+  margin-top: 40px;
+  background: #f8f8f8;
+  padding: 20px;
+  font-size: 1.3em;
+  color: #c0392b;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+/* ==== FOOTER ==== */
+footer {
+  background: #1a1a1a;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+}
+/* ==== FORM PEMESAN ==== */
+.order-form {
+  margin-top: 40px;
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.order-form h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+.order-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+.order-form input:focus {
+  outline: none;
+  border-color: #f39c12;
+  box-shadow: 0 0 5px rgba(243, 156, 18, 0.4);
+}
+.order-form button {
+  width: 100%;
+  font-size: 1em;
+}
