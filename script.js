@@ -24,7 +24,7 @@ function kirimPesanan() {
   }
 
   // Nomor WhatsApp admin (ganti sesuai kebutuhan)
-  const admin = "6287770846442";
+  const admin = "6285329341685";
 
   // Format isi pesan
   let teks = `📦 *PESANAN BARU KELOMPOK-1*\n\n👤 Nama: ${nama}\n📞 kelas: ${nohp}\n\n🍴 *Daftar Pesanan:*\n`;
@@ -37,5 +37,6 @@ function kirimPesanan() {
   const url = `https://wa.me/${admin}?text=${encodeURIComponent(teks)}`;
   window.open(url, "_blank");
 }
+
 
 
